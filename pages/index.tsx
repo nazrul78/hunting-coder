@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Script from 'next/script'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import styles1 from '@/styles/Home1.module.css'
 import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -35,7 +36,7 @@ export default function Home() {
         <p className={styles.description}>A blog for hunting coders by a hunting coder</p>
 
 
-        <div className="blogs">
+        <div>
 
           <h3>Populer Blogs</h3>
           <div className="blogItem">
