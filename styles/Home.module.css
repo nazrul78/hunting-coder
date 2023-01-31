@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
   padding: 2rem;
   min-height: 100vh;
@@ -283,4 +283,9 @@
   margin: 0 24px;
   list-style: none;
   font-weight: bold;
+}
+
+.myImg {
+  border-radius: 10px;
+
 }
