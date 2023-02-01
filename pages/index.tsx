@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import Link from 'next/link'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -33,14 +32,7 @@ export default function Home() {
 
 
 
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href='/'><li>Home</li></Link>
-          <Link href='/about'><li>About</li></Link>
-          <Link href='/blog'><li>Blog</li></Link>
-          <Link href='/contact'><li>Contact</li></Link>
-        </ul>
-      </nav>
+
 
 
       <main className={styles.main}>
@@ -56,7 +48,7 @@ export default function Home() {
 
         <div>
 
-          <h2>Populer Blogs</h2>
+          <h2>Latest Blogs: </h2>
           <div className="blogItem">
             <h3>How to learn Javascript in 2023?</h3>
             <p>Javascript is the language used to design logic for the web</p>
