@@ -10,7 +10,7 @@ const slug = () => {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
-                <h1> Title of the page {slug}</h1>
+                <h1>Title of the page {slug}</h1>
 
 
                 <div>
