@@ -3,40 +3,34 @@ import styles from '@/styles/Blog.module.css'
 import Link from 'next/link'
 
 const Blog = () => {
-    console.log('>>>>>>>>>>>')
-    // const [blogs, setBlogs] = useState([]);
+    const [blogs, setBlogs] = useState([]);
+    //  const [blogs, setBlogs] = useState < any[] > ([])
     useEffect(() => {
-        console.log('use effect is running');
-
-        fetch('http://localhost:3000/api/blogs').then((a) => {
-            return a.json();
+        fetch('http://localhost:3000/api/blogs').then((data) => {
+            return data.json();
 
         }).then((parsed) => {
             console.log(parsed);
-            // setBlogs(parsed)
+            setBlogs(parsed)
         })
 
     }, []);
     return (
         <main className={styles.main}>
-            {/* {blogs.map((item) => <h3>{item}</h3>)} */}
 
-            {/* {blogs.map((blogitem) => {
 
-                return <div>${blogitem.}</div>
-                // return <div>
-                //     <Link href={'/blogpost/learn-javascript'}>
-                //         <h3 className={styles.blogItem}>{blogitem}</h3>
-                //     </Link>
+            {blogs.map((blogitem) => {
 
-                //     <p>Javascript is the language used to design logic for the web
+                return <div key={blogitem.slug}>
+                    <Link href={`/blogpost/${blogitem.slug}`}>
+                        <h3 className={styles.blogItemh3}>{blogitem.title}</h3>
+                    </Link>
 
-                //         lorem23
-                //     </p>
-                // </div>
-            })} */}
+                    <p className={styles.blogItemp}>{blogitem.content.substring(0, 190)}...</p>
+                </div>
+            })}
 
-            <div>
+            {/* <div>
                 <div>
                     <Link href={'/blogpost/learn-javascript'}>
                         <h3 className={styles.blogItem}>How to learn Javascript in 2023?</h3>
@@ -67,7 +61,7 @@ const Blog = () => {
                     <h3>How to learn Javascript in 2023?</h3>
                     <p>Javascript is the language used to design logic for the web</p>
                 </div>
-            </div>
+            </div> */}
         </main>
     )
 }
