@@ -10,14 +10,14 @@ const Blog = () => {
             return data.json();
 
         }).then((parsed) => {
-            console.log(parsed);
+
             setBlogs(parsed)
+
         })
 
     }, []);
     return (
         <main className={styles.main}>
-
 
             {blogs.map((blogitem) => {
 
