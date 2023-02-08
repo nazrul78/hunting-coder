@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
-    //  const [blogs, setBlogs] = useState < any[] > ([])
+    // const [blogs, setBlogs] = useState < any[] > ([])
     useEffect(() => {
         fetch('http://localhost:3000/api/blogs').then((data) => {
             return data.json();

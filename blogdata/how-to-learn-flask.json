@@ -1,6 +1,6 @@
 {
     "title": "How to learn flask",
-    "content": "A regular expression (shortened as regex or regexp;[1] sometimes referred to as rational expression[2][3]) is a sequence of characters that specifies a search pattern in text. Usually such patterns are used by string-searching algorithms for operations on strings, or for input validation. Regular expression techniques are developed in theoretical computer science and formal language theory.",
+    "content": "Flask was created by Armin Ronacher of Pocoo, an international group of Python enthusiasts formed in 2004.[6] According to Ronacher, the idea was originally an April Fool's joke that was popular enough to make into a serious application.[7][8][9] The name is a play on the earlier Bottle framework.[7] When Ronacher and Georg Brandl created a bulletin board system written in Python in 2004, the Pocoo projects Werkzeug and Jinja were developed.[10] In April 2016, the Pocoo team was disbanded and development of Flask and related libraries passed to the newly formed Pallets project.[11][12] Since 2018, Flask-related data and objects can be rendered with Bootstrap.[13] Flask has become popular among Python enthusiasts. As of October 2020, it has second most stars on GitHub among Python web-development frameworks, only slightly behind Django,[14] and was voted the most popular web framework in the Python Developers Survey 2018, 2019, 2020 and 2021.[15][16][17] [18]",
     "author": "Nazrul Islam",
     "slug": "how-to-learn-flask"
 }
