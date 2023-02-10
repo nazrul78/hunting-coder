@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from '@/styles/Blog.module.css'
 import Link from 'next/link'
 
-const Blog = (props: any) => {
+const Blog = (props) => {
     console.log(props);
     const [blogs, setBlogs] = useState(props.allBlogs);
     // const [blogs, setBlog] = useState < any > (props.allBlogs);
@@ -10,7 +10,7 @@ const Blog = (props: any) => {
     return (
         <main className={styles.main}>
 
-            {blogs.map((blogitem: any) => {
+            {blogs.map((blogitem) => {
 
                 return <div key={blogitem.slug}>
                     <Link href={`/blogpost/${blogitem.slug}`}>
@@ -27,7 +27,7 @@ const Blog = (props: any) => {
 
 
 
-export async function getServerSideProps(context: any) {
+export async function getServerSideProps(context) {
     let data = await fetch('http://localhost:3000/api/blogs');
     let allBlogs = await data.json();
     return {
