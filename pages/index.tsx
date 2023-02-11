@@ -42,7 +42,7 @@ export default function Home() {
           <span>Hunting Coder</span>
         </h1>
 
-        <img className={styles.myImg} src='/homeimg.jpg' width={237} height={158} />
+        <img className={styles.myImg} src='/homeimg.jpg' width={237} height={158} alt="hunting coder" />
         <p className={styles.description}>A blog for hunting coders by a hunting coder.</p>
 
 
