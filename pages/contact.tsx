@@ -13,11 +13,34 @@ const Contact = () => {
 
         e.preventDefault();
 
-        console.log(name, email, pass, desc);
+        // console.log(name, email, pass, desc);
+
+        const data = { name, email, pass, desc };
+
+        fetch('http://localhost:3000/api/postcontact/', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.text())
+            .then((data) => {
+                console.log('Success:', data);
+                alert('Thanks for contacting us.');
+                setname('');
+                setemail('');
+                setpass('');
+                setdesc('');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
     }
 
     const handleChange = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         if (e.target.name == 'name') {
             setname(e.target.value);
         } else if (e.target.name == 'email') {
