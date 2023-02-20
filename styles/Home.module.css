@@ -7,17 +7,6 @@
   min-height: 100vh;
 }
 
-.description {
-  display: inherit;
-  justify-content: center;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
 .description a {
   display: flex;
   justify-content: center;
@@ -286,6 +275,42 @@
 }
 
 .myImg {
-  border-radius: 10px;
+  width: 157px;
+  border-radius: 92px;
+}
 
+.imagewrap {
+  padding: 15px 0px;
+}
+
+.title {
+  margin: 0px 0px;
+  /* margin-bottom: 0px; */
+  line-height: 1.15;
+  font-size: 1.5rem;
+}
+
+.h2 {
+  font-size: 2.5rem;
+}
+
+.h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.btn {
+  color: white;
+  background: black;
+  padding: 7px 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 9px;
+}
+
+.p {
+  margin: 16px 0;
+  margin-top: 3px;
 }
