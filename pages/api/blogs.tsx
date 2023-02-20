@@ -8,17 +8,20 @@ export default async function handler(
     res: NextApiResponse
 ) {
 
-    let data = await fs.promises.readdir("blogdata")
+
+    let data = await fs.promises.readdir("blogdata");
+    data = data.slice(0, parseInt(req.query.count));
+
     let myFile;
     let allBlogs = [];
     for (let index = 0; index < data.length; index++) {
 
         const element = data[index];
-        console.log(element);
+
 
 
         myFile = await fs.promises.readFile(('blogdata/' + element), 'utf-8')
-        console.log(myFile);
+
         allBlogs.push(JSON.parse(myFile));
 
     }
