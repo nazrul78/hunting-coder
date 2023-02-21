@@ -1,8 +1,7 @@
 import * as fs from 'node:fs';
 export default async function handler(req: any, res: any) {
     if (req.method === 'POST') {
-        // Process a POST request
-        // console.log(req.body)
+
         let data = await fs.promises.readdir('contactdata');
 
         // console.log(data);
@@ -10,6 +9,5 @@ export default async function handler(req: any, res: any) {
         res.status(200).json()
     } else {
         res.status(200).json(['Nazrul Nakib'])
-        // name, email, desc, phone
     }
 }

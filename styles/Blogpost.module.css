@@ -9,17 +9,13 @@
     padding-top: 3rem;
 }
 
-/* .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 4rem 0;
-} */
 
 .container {
     padding: 0 22rem;
+}
 
-
-
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0 2.5rem;
+    }
 }

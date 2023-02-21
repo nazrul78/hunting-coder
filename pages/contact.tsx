@@ -6,16 +6,16 @@ import styles from '@/styles/Contact.module.css'
 const Contact = () => {
     const [name, setname] = useState('');
     const [email, setemail] = useState('');
-    const [pass, setpass] = useState('');
+    const [phone, setphone] = useState('');
     const [desc, setdesc] = useState('');
 
     const handleSubmit = (e) => {
 
         e.preventDefault();
 
-        // console.log(name, email, pass, desc);
+        // console.log(name, email, phone, desc);
 
-        const data = { name, email, pass, desc };
+        const data = { name, email, phone, desc };
 
         fetch('http://localhost:3000/api/postcontact/', {
             method: 'POST', // or 'PUT'
@@ -26,11 +26,11 @@ const Contact = () => {
         })
             .then((response) => response.text())
             .then((data) => {
-                console.log('Success:', data);
+                // console.log('Success:', data);
                 alert('Thanks for contacting us.');
                 setname('');
                 setemail('');
-                setpass('');
+                setphone('');
                 setdesc('');
             })
             .catch((error) => {
@@ -45,8 +45,8 @@ const Contact = () => {
             setname(e.target.value);
         } else if (e.target.name == 'email') {
             setemail(e.target.value);
-        } else if (e.target.name == 'pass') {
-            setpass(e.target.value);
+        } else if (e.target.name == 'phone') {
+            setphone(e.target.value);
         }
         else if (e.target.name == 'desc') {
             setdesc(e.target.value);
@@ -71,8 +71,8 @@ const Contact = () => {
 
 
                 <div className={styles.mb3}>
-                    <label htmlFor='pass' className={styles.formlable}>Enter your password</label>
-                    <input className={styles.input} type="text" value={pass} onChange={handleChange} id="pass" name="pass" aria-describedby="emailHelp" required />
+                    <label htmlFor='phone' className={styles.formlable}>Enter your phone</label>
+                    <input className={styles.input} type="phone" value={phone} onChange={handleChange} id="phone" name="phone" aria-describedby="emailHelp" required />
                 </div>
 
                 <div className={styles.mb3}>
