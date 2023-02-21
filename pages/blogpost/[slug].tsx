@@ -32,13 +32,12 @@ const Slug = (props: any) => {
 
 
 export async function getStaticPaths() {
+    let allb = await fs.promises.readdir(`blogdata`)
+    let allb2 = allb.map((item) => {
+        return { params: { slug: item.split('.')[0] } }
+    })
     return {
-        paths: [
-            { params: { slug: 'how-to-learn-flask' } },
-            { params: { slug: 'how-to-learn-javascript' } },
-            { params: { slug: 'how-to-learn-nextjs' } },
-
-        ],
+        paths: allb2,
         fallback: true, // can also be true or 'blocking'
     }
 }
