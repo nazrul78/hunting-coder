@@ -9,7 +9,7 @@ const Contact = () => {
     const [phone, setphone] = useState('');
     const [desc, setdesc] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
 
         e.preventDefault();
 
@@ -39,7 +39,7 @@ const Contact = () => {
 
     }
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         // console.log(e.target.value);
         if (e.target.name == 'name') {
             setname(e.target.value);
@@ -66,7 +66,7 @@ const Contact = () => {
                 <div className={styles.mb3}>
                     <label htmlFor='email' className={styles.formlable}>Enter your email</label>
                     <input className={styles.input} type="email" value={email} onChange={handleChange} id="email" name="email" aria-describedby="emailHelp" />
-                    <div id='emailHelp' className={styles.fromtext}>We'll never share your email with anyone else.</div>
+                    <div id='emailHelp' className={styles.fromtext}>We will never share your email with anyone else.</div>
                 </div>
 
 

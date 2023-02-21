@@ -4,7 +4,7 @@ import Link from 'next/link'
 import * as fs from 'node:fs';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const Blog = (props: { allBlogs: any; }) => {
+const Blog = (props: any) => {
     //  console.log(props);
     const [count, setCount] = useState(2);
     const [blogs, setBlogs] = useState(props.allBlogs);
@@ -31,7 +31,7 @@ const Blog = (props: { allBlogs: any; }) => {
                     </p>
                 }
             >
-                {blogs.map((blogitem) => {
+                {blogs.map((blogitem: any) => {
 
                     return <div key={blogitem.slug}>
                         <Link href={`/blogpost/${blogitem.slug}`}>
